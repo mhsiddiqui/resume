@@ -25,4 +25,11 @@
     target: '#sideNav'
   });
 
+  var prevTime = new Date(2013,11,2,0,0);  // Feb 1, 2011
+  var thisTime = new Date();              // now
+  var diff = thisTime.getTime() - prevTime.getTime();   // now - Feb 1
+  var no_of_days =(diff / (1000*60*60*24)); 
+  var exp = Math.ceil((no_of_days/365)*10)/10;
+  $('#experience_year').html(exp);
+
 })(jQuery); // End of use strict
